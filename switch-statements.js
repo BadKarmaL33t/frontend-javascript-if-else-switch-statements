@@ -10,7 +10,26 @@ const errorCode = 0;
 // 2: "Koffiebonen op"
 // 3: "Afvalbak vol"
 // 4: "Geen druk"
-
+switch (errorCode) {
+    case 0:
+        console.log("Geen watertoevoer");
+        break;
+    case 1:
+        console.log("Temperatuur te laag");
+        break;
+    case 2:
+        console.log("Koffiebonen op");
+        break;
+    case 3:
+        console.log("Afvalbak vol");
+        break;
+    case 4:
+        console.log("Geen druk");
+        break;
+    default:
+        console.log("Onbekende foutmelding");
+        break;
+}
 // Verwachtte uitkomsten:
 // const errorCode = 0 geeft "Geen watertoevoer" in de terminal
 // const errorCode = 4 geeft "Geen druk" in de terminal
@@ -21,7 +40,26 @@ const errorCode = 0;
 // Opdracht 2: schrijf een switch statement die op basis van de volgende variabele een bijbehorende foutmelding in de console logt.
 // ==========================================
 
-const monitorColor = "red";
+let monitorColor = "red";
+
+switch (monitorColor) {
+    case "green":
+        console.log("Hartslag stabiel");
+        break;
+    case "yellow":
+        console.log("Hartslag verhoogd");
+        break;
+    case "orange":
+        console.log("Kritieke hartslag, actie vereist!");
+        break;
+    case "red":
+        console.log("Kritieke hartslag, actie vereist!");
+        break;
+    default:
+        console.log("Hartslag onbekend");
+        break;
+}
+
 
 // Deze variabele zal altijd een kleur bevatten. De specifieke kleuren waar een melding bij gemaakt moet worden zijn: "red", "green", "yellow" en "orange".
 // Deze codes zijn gelinkt aan de volgende meldingen:
@@ -40,3 +78,25 @@ const monitorColor = "red";
 // ==========================================
 // [BONUSOPDRACHT] - optioneel: kun je de switch-statement uit opdracht 2 ook opschrijven met een aantal if-statements?
 // ==========================================
+monitorColor = "red";
+if (monitorColor !== undefined) {
+    switch (monitorColor) {
+        case "green":
+            console.log("Hartslag stabiel");
+            break;
+        case "yellow":
+            console.log("Hartslag verhoogd");
+            break;
+        case "orange":
+            console.log("Kritieke hartslag, actie vereist!");
+            break;
+        case "red":
+            console.log("Kritieke hartslag, actie vereist!");
+            break;
+        default:
+            console.log("Hartslag onbekend");
+            break;
+    }
+} else {
+    console.log("check the hartmonitor light bulb");
+}
